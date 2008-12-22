@@ -1,6 +1,6 @@
 = GoodForm
 
-* FIX (url)
+* A Rails form builder for clean forms as originally designed by Khoi Vinh.
 
 == AUTHOR
 
@@ -8,7 +8,14 @@ Geoffrey Grosenbach
 
 == DESCRIPTION:
 
-Rails form builder that implements a Good Form as demonstrated by Khoi Vinh.
+This plugin provides a GoodFormBuilder class that can be used with Rails
+forms to generate nice-looking, grid-based forms.
+
+== EXAMPLE:
+
+* http://rubyonrailsworkshops.com
+* http://www.subtraction.com/2005/08/22/free-form-fo
+* http://examples.webtypes.com/goodform/
 
 == FEATURES/PROBLEMS:
 
@@ -20,11 +27,14 @@ Rails form builder that implements a Good Form as demonstrated by Khoi Vinh.
 
 == REQUIREMENTS:
 
-* Uses Sass for stylesheets, as shipped with Haml.
-
+* Provides a Sass stylesheet that can be customized. 
+* Or use the static CSS from the generator.
+                                   
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+* ./script/plugin install git://github.com/topfunky/good_form_builder.git
+* ./script/generate good_form_builder (Copies CSS to public directory)
+* Write a form and specify :builder => GoodFormBuilder
 
 == LICENSE:
 

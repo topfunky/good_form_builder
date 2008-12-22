@@ -5,7 +5,6 @@ require 'hoe'
 # require './lib/good_form_builder.rb'
 
 Hoe.new('good_form_builder', "0.0.1") do |p|
-  # p.rubyforge_name = 'GoodFormx' # if different than lowercase project name
   p.developer('Geoffrey Grosenbach', 'boss@topfunky.com')
 end
 
