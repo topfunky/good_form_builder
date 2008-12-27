@@ -1,0 +1,32 @@
+!!! Strict
+%html
+  %head
+    %title
+      Good Form Example
+      
+    %link{:href => "../generators/good_form_builder/templates/good_form.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+
+    %style
+      body { font-family: sans-serif; margin: 2em; }
+      h1 { margin-bottom: 0.5em; }
+  
+  %body
+
+    %h1
+      Good Form Example
+
+    -# HACK Use Haml form since output_buffer isn't working
+    %form
+      -form_for(ModelStub.new, :builder => GoodFormBuilder) do |f|
+        %fieldset
+          -# TODO Get output_buffer and concat working so fieldset helper can be used.
+          %legend
+            Your Info, Please
+          
+          =f.text_field 'title'
+
+          =f.text_field 'author', :label => "Author", :class => "field-first"
+          =f.text_field 'department', :class => "field-last"
+                  
+        %fieldset
+          =f.submit "Save"

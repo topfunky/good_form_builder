@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>
+      Good Form Example
+    </title>
+    <link href='../generators/good_form_builder/templates/good_form.css' media='screen' rel='stylesheet' type='text/css' />
+    <style>
+      body { font-family: sans-serif; margin: 2em; }
+      h1 { margin-bottom: 0.5em; }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Good Form Example
+    </h1>
+    <form>
+        <fieldset>
+          <legend>
+            Your Info, Please
+          </legend>
+          <label class="field" for="model_stub_title">Title<input id="model_stub_title" name="model_stub[title]" size="30" type="text" value="" /></label>
+          <label class="field-first" for="model_stub_author">Author<input id="model_stub_author" name="model_stub[author]" size="30" type="text" value="" /></label>
+          <label class="field-last" for="model_stub_department">Department<input id="model_stub_department" name="model_stub[department]" size="30" type="text" value="" /></label>
+        </fieldset>
+        <fieldset>
+          <input id="model_stub_submit" name="commit" type="submit" value="Save" />
+        </fieldset>
+    </form>
+  </body>
+</html>
