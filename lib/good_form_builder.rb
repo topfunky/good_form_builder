@@ -24,7 +24,17 @@ class GoodFormBuilder < ActionView::Helpers::FormBuilder
                           :class => label_class,
                           :for => [@object_name, field].join('_'))
   end
+  
+  def password_field(field, *args)
+    options = args.last.is_a?(Hash) ? args.pop : {}
 
+    label_class = (options.delete(:class) || 'field')
+    @template.content_tag("label",
+                          (options.delete(:label) || field.to_s.titleize) + super,
+                          :class => label_class,
+                          :for => [@object_name, field].join('_'))
+  end
+  
   def radio_button(field, tag_value, options={})
     label_title = options.delete(:label)
     options[:class] = "radiobutton"
@@ -52,6 +62,3 @@ class GoodFormBuilder < ActionView::Helpers::FormBuilder
   end
 
 end
-
-
-
